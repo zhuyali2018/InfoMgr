@@ -1,0 +1,71 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: InfoMgr - Win32 Release Unicode--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\yali.zhu\LOCALS~1\Temp\RSP35.tmp" with contents
+[
+/nologo /MT /W3 /GX /Zd /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /D "_UNICODE" /Fo"InfoMgr___Win32_Release_Unicode/" /Fd"InfoMgr___Win32_Release_Unicode/" /FD /c 
+"D:\MyDocuments\SourceCode\C++src\InfoMgr\LeftView.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\yali.zhu\LOCALS~1\Temp\RSP35.tmp" 
+Creating temporary file "C:\DOCUME~1\yali.zhu\LOCALS~1\Temp\RSP36.tmp" with contents
+[
+/nologo /entry:"wWinMainCRTStartup" /subsystem:windows /incremental:no /pdb:"InfoMgr___Win32_Release_Unicode/InfoMgrU.pdb" /map:"InfoMgr___Win32_Release_Unicode/InfoMgrU.map" /machine:I386 /out:"InfoMgr___Win32_Release_Unicode/InfoMgrU.exe" /MAPINFO:LINES /MAPINFO:EXPORTS 
+".\InfoMgr___Win32_Release_Unicode\ContentView.obj"
+".\InfoMgr___Win32_Release_Unicode\DetailFile.obj"
+".\InfoMgr___Win32_Release_Unicode\DetailObj.obj"
+".\InfoMgr___Win32_Release_Unicode\DropSrc.obj"
+".\InfoMgr___Win32_Release_Unicode\EditDialog.obj"
+".\InfoMgr___Win32_Release_Unicode\FindDialog.obj"
+".\InfoMgr___Win32_Release_Unicode\font.obj"
+".\InfoMgr___Win32_Release_Unicode\InfoMgr.obj"
+".\InfoMgr___Win32_Release_Unicode\InfoMgrDoc.obj"
+".\InfoMgr___Win32_Release_Unicode\InfoMgrView.obj"
+".\InfoMgr___Win32_Release_Unicode\LeftView.obj"
+".\InfoMgr___Win32_Release_Unicode\MainFrm.obj"
+".\InfoMgr___Win32_Release_Unicode\oleobject.obj"
+".\InfoMgr___Win32_Release_Unicode\oleobjects.obj"
+".\InfoMgr___Win32_Release_Unicode\picture.obj"
+".\InfoMgr___Win32_Release_Unicode\Record.obj"
+".\InfoMgr___Win32_Release_Unicode\richtext.obj"
+".\InfoMgr___Win32_Release_Unicode\StdAfx.obj"
+".\InfoMgr___Win32_Release_Unicode\Subfunctions.obj"
+".\InfoMgr___Win32_Release_Unicode\TMsgbox.obj"
+".\InfoMgr___Win32_Release_Unicode\UndoItem.obj"
+".\InfoMgr___Win32_Release_Unicode\webbrowser2.obj"
+".\InfoMgr___Win32_Release_Unicode\wmpcdrom.obj"
+".\InfoMgr___Win32_Release_Unicode\wmpcdromcollection.obj"
+".\InfoMgr___Win32_Release_Unicode\wmpclosedcaption.obj"
+".\InfoMgr___Win32_Release_Unicode\wmpcontrols.obj"
+".\InfoMgr___Win32_Release_Unicode\wmpdvd.obj"
+".\InfoMgr___Win32_Release_Unicode\wmperror.obj"
+".\InfoMgr___Win32_Release_Unicode\wmperroritem.obj"
+".\InfoMgr___Win32_Release_Unicode\wmpmedia.obj"
+".\InfoMgr___Win32_Release_Unicode\wmpmediacollection.obj"
+".\InfoMgr___Win32_Release_Unicode\wmpnetwork.obj"
+".\InfoMgr___Win32_Release_Unicode\wmpplayer4.obj"
+".\InfoMgr___Win32_Release_Unicode\wmpplayerapplication.obj"
+".\InfoMgr___Win32_Release_Unicode\wmpplaylist.obj"
+".\InfoMgr___Win32_Release_Unicode\wmpplaylistarray.obj"
+".\InfoMgr___Win32_Release_Unicode\wmpplaylistcollection.obj"
+".\InfoMgr___Win32_Release_Unicode\wmpsettings.obj"
+".\InfoMgr___Win32_Release_Unicode\wmpstringcollection.obj"
+".\InfoMgr___Win32_Release_Unicode\InfoMgr.res"
+]
+Creating command line "link.exe @C:\DOCUME~1\yali.zhu\LOCALS~1\Temp\RSP36.tmp"
+<h3>Output Window</h3>
+Compiling...
+LeftView.cpp
+Linking...
+
+
+
+<h3>Results</h3>
+InfoMgrU.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

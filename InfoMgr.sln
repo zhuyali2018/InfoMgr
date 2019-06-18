@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "InfoMgr", "InfoMgr.vcxproj", "{06B308F8-CD04-4508-98F0-8390378014AA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug Unicode|Win32 = Debug Unicode|Win32
+		Debug|Win32 = Debug|Win32
+		Release Unicode|Win32 = Release Unicode|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{06B308F8-CD04-4508-98F0-8390378014AA}.Debug Unicode|Win32.ActiveCfg = Debug Unicode|Win32
+		{06B308F8-CD04-4508-98F0-8390378014AA}.Debug Unicode|Win32.Build.0 = Debug Unicode|Win32
+		{06B308F8-CD04-4508-98F0-8390378014AA}.Debug|Win32.ActiveCfg = Debug|Win32
+		{06B308F8-CD04-4508-98F0-8390378014AA}.Debug|Win32.Build.0 = Debug|Win32
+		{06B308F8-CD04-4508-98F0-8390378014AA}.Release Unicode|Win32.ActiveCfg = Release Unicode|Win32
+		{06B308F8-CD04-4508-98F0-8390378014AA}.Release Unicode|Win32.Build.0 = Release Unicode|Win32
+		{06B308F8-CD04-4508-98F0-8390378014AA}.Release|Win32.ActiveCfg = Release|Win32
+		{06B308F8-CD04-4508-98F0-8390378014AA}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

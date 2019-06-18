@@ -1,0 +1,16 @@
+<RecordID=18>
+1^<ParentID>0</ParentID>^New Node 1^^hasdetail
+5^<ParentID>0</ParentID>^New Node 5^^hasdetail
+6^<ParentID>5</ParentID>^New Node 6^(04/22/2009 18:31:13)^nodetail
+7^<ParentID>5</ParentID>^New Node 7^^hasdetail
+8^<ParentID>0</ParentID>^New Node 8^(04/22/2009 18:29:13)^nodetail
+9^<ParentID>0</ParentID>^New Node 9^(04/22/2009 18:29:10)^nodetail
+10^<ParentID>9</ParentID>^Samsung-monitor-20081215-01.jpg^D:\YaliVistaDocs\SourceCode\VS2008_C++Src\InfoMgr\Debug\Samsung-monitor-20081215-01.jpg^nodetail
+11^<ParentID>9</ParentID>^indiatrain2.jpg^D:\YaliVistaDocs\SourceCode\VS2008_C++Src\InfoMgr\Debug\indiatrain2.jpg^nodetail
+12^<ParentID>0</ParentID>^New Node 12^(04/22/2009 18:29:25)^nodetail
+13^<ParentID>12</ParentID>^Samsung-monitor-20081215-01.jpg^::SAMSUNG-MONITOR-20081215-01.JPG^nodetail
+14^<ParentID>12</ParentID>^indiatrain2.jpg^::INDIATRAIN2.JPG^nodetail
+15^<ParentID>0</ParentID>^New Node 15^(04/22/2009 18:29:03)^nodetail
+16^<ParentID>15</ParentID>^Samsung-monitor-20081215-01.jpg^::SAMSUNG-MONITOR-20081215-01.JPG^nodetail
+17^<ParentID>15</ParentID>^indiatrain2.jpg^::INDIATRAIN2.JPG^nodetail
+18^<ParentID>0</ParentID>^New Node 18^asdfasdf (04/22/2009 18:31:35)^hasdetail
