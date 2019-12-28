@@ -3,7 +3,7 @@
 
 #include "stdafx.h"
 #include "InfoMgr.h"
-
+#include "ConstantDefs.h"
 #include "MainFrm.h"
 #include "InfoMgrDoc.h"
 #include "LeftView.h"
@@ -171,7 +171,7 @@ public:
 CAboutDlg::CAboutDlg() : CDialog(CAboutDlg::IDD)
 {
 	//{{AFX_DATA_INIT(CAboutDlg)
-	m_Version = (CString)"InfoMgr "+VERSIONNAME+(CString)" Version "+VERSION;
+	m_Version = (CString)"InfoMgr "+VERSIONNAME+(CString)" Version 5.00";
 	//}}AFX_DATA_INIT
 }
 
@@ -264,7 +264,7 @@ BOOL CInfoMgrApp::OnIdle(LONG lCount)
 	int pos=maintitle.Find(_T("-"));
 	if(pos>0){		
 		CString filename=maintitle.Mid(0,pos);
-		CString title=filename+"- "+"Information Manager "+VERSIONNAME+" version "+VERSION;
+		CString title=filename+"- "+"Information Manager "+VERSIONNAME+" version 5.00";
 		m_pMainWnd-> SetWindowText(title);
 		bTitleUpdated=TRUE;
 	}

@@ -50,7 +50,7 @@ CRecord::CRecord(CString line)
 		return;
 	}
 	CString tline=line;
-	if(line.Find(_T("<ParentID>"))>0){		
+	if(line.Find(_T("^"))>0){
 		char delimiter='^';
 		int count=0;
 		int pos=tline.Find(delimiter);
@@ -64,10 +64,7 @@ CRecord::CRecord(CString line)
 			if(count==1) {				// ID
 				ID=_ttoi(substring);
 			}else if(count==2) {		// Parent IDs
-				int pos2=substring.Find(_T("</ParentID>"));
-				int pos3=substring.Find(_T("<ParentID>"));
-				int len=pos2-pos3-10;
-				CString tmp=substring.Mid(10,len);
+				CString tmp=substring;
 				//foreach(string subID in tmp.Split('-')){
 				int pos1=tmp.Find('-');				
 				while(pos1>0){

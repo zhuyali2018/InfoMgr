@@ -435,7 +435,7 @@ END
 
 STRINGTABLE
 BEGIN
-    IDR_MAINFRAME           "Infomation Manager Unicode version 4.07\n\nInfoMgr\nInfoMgr Files (*.inf)\n.inf\nInfoMgr.Document\nInfoMgr Document"
+    IDR_MAINFRAME           "Infomation Manager UTF-8 version 5.00\n\nInfoMgr\nInfoMgr Files (*.inf)\n.inf\nInfoMgr.Document\nInfoMgr Document"
 END
 
 STRINGTABLE

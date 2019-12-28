@@ -36,10 +36,10 @@
 							// draggging resizing keep getting jpg file not found, fixed that!
 //#define VERSION "4.09"      //Temp file webpage.htm will be created in current folder instead of c:\ so that it does not have to be launched as administrator
 //#define VERSION "4.10"      //image accessing not working for ::FOLDER fixed, now work for both ::FOLDER and ::\FOLDER
-#define VERSION "4.11"      //AutoPopulate ::\\images2016\\
-
+//#define VERSION "4.11"      //AutoPopulate ::\\images2016\\
+#define VERSION "5.00"      //Removed the <ParentID>
 #ifdef UNICODE
 #define VERSIONNAME "Unicode"
 #else
-#define VERSIONNAME "Ascii"
+#define VERSIONNAME "UTF-8"
 #endif
