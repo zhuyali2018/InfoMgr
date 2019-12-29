@@ -31,9 +31,11 @@ public:
 	CEdit	m_CtrlName;
 	CEdit	m_CtrlDetail;
 	CEdit	m_CtrlDesp;
+	CEdit   m_Ctrl_Tag;
 	CString	m_Name;
 	CString	m_Details;
 	CString	m_Description;
+	CString m_Descrip_tag;
 	CWebBrowser2	m_browser;
 	//}}AFX_DATA
 
@@ -82,3 +84,4 @@ protected:
 // Microsoft Visual C++ will insert additional declarations immediately before the previous line.
 
 #endif // !defined(AFX_CONTENTVIEW_H__FC8F2F12_32EB_4ED1_A9B2_9264E682A49C__INCLUDED_)
+#include "afxwin.h"

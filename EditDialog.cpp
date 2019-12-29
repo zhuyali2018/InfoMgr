@@ -20,6 +20,7 @@ CEditDialog::CEditDialog(CWnd* pParent /*=NULL*/,CRecord *p)
 {
 	//{{AFX_DATA_INIT(CEditDialog)	
 	m_Description = _T("");
+	m_Descrip_tag = _T("");
 	m_Name = _T("");
 	m_Detail = _T("");
 	m_Detail0 = _T("");
@@ -29,6 +30,7 @@ CEditDialog::CEditDialog(CWnd* pParent /*=NULL*/,CRecord *p)
 	pRecord=p;
 	m_Name=p->Name;
 	m_Description=p->Description;
+	m_Descrip_tag = p->Descrip_tag;
 	////////////////////////////////////////////////
 	//  Moved following to OnInitDialog()
 	//if(p->hasDetail){
@@ -59,11 +61,13 @@ void CEditDialog::DoDataExchange(CDataExchange* pDX)
 	DDX_Control(pDX, IDC_CHECKRichTextt, m_CtrlRichTextChk);
 	DDX_Control(pDX, IDC_EDIT_DETAIL0, m_CtrlDetail0);
 	DDX_Control(pDX, IDC_EDIT_DESP, m_CtrlDesp);
+	DDX_Control(pDX, IDC_EDIT_TAGS, m_Ctrl_Tag);
 	DDX_Control(pDX, IDC_EDIT_DETAIL, m_CtrlDetail);
 	DDX_Control(pDX, IDC_EDIT_NAME, m_CtrlName);
 	DDX_Control(pDX, IDOK, m_bnOK);
 	DDX_Control(pDX, IDCANCEL, m_bnCancel);
 	DDX_Text(pDX, IDC_EDIT_DESP, m_Description);
+	DDX_Text(pDX, IDC_EDIT_TAGS, m_Descrip_tag);
 	DDX_Text(pDX, IDC_EDIT_NAME, m_Name);
 	DDX_Text(pDX, IDC_EDIT_DETAIL, m_Detail);
 	DDX_Text(pDX, IDC_EDIT_DETAIL0, m_Detail0);
@@ -94,6 +98,7 @@ void CEditDialog::OnOK()
 	UpdateData();
 	pRecord->Name=m_Name;
 	pRecord->Description=m_Description;
+	pRecord->Descrip_tag=m_Descrip_tag;
 	m_Detail.TrimLeft();
 	m_Detail.TrimRight();	
 	
@@ -133,8 +138,9 @@ void CEditDialog::OnSize(UINT nType, int cx, int cy)
 
 	m_CtrlName.MoveWindow(x,y,w,h);
 	m_CtrlDesp.MoveWindow(x,y+30,w,h);
-	m_CtrlDetail.MoveWindow(x,y+30+30,w,cy-180);
-	m_CtrlDetail0.MoveWindow(x,y+30+30,w,cy-180);
+	m_Ctrl_Tag.MoveWindow(x, y + 60, w, h);
+	m_CtrlDetail.MoveWindow(x,y+30*3,w,cy-210);
+	m_CtrlDetail0.MoveWindow(x,y+30*3,w,cy-210);
 	m_bnCancel.MoveWindow(cx-right-2*bnwidth-12,cy-bottom-bnheight,bnwidth,bnheight);
 	m_bnOK.MoveWindow(cx-right-bnwidth,cy-bottom-bnheight,bnwidth,bnheight);
 	m_CtrlRichTextChk.MoveWindow(x,cy-bottom-bnheight,bnwidth*2,bnheight);
@@ -227,6 +233,7 @@ BOOL CEditDialog::OnInitDialog()
 	if(m_bReadOnly){
 		m_CtrlName.SetReadOnly();
 		m_CtrlDesp.SetReadOnly();
+		m_Ctrl_Tag.SetReadOnly();
 		m_CtrlDetail.SetEnabled(FALSE);
 		m_CtrlDetail0.SetReadOnly();
 	}
@@ -251,7 +258,7 @@ BOOL CEditDialog::OnInitDialog()
 		/*CTime now=CTime::GetCurrentTime();
 		CString strNow=now.Format(_T("%m/%d/%Y %H:%M:%S"));
 		m_Description=_T("(")+strNow+_T(")");*/
-		m_Description = _T("::\\images2016\\");
+		m_Description = _T("::\\images\\");
 		UpdateData(FALSE);
 	}
 	

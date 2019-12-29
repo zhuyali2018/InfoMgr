@@ -26,6 +26,7 @@ static char THIS_FILE[]=__FILE__;
 //////////////////////////////////////////////////////////////////////
 
 CRecord::CRecord()
+	: Descrip_tag(_T(""))
 {
 	initializer();
 }

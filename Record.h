@@ -37,6 +37,7 @@ public:
 	int getNextRecordID();
 	CString Name;
 	CString Description;
+	CString Descrip_tag;   // for search on tags
 	CString Detail;
 	BOOL	hasDetail;
 	int		ID;				//recordID

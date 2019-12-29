@@ -32,11 +32,13 @@ public:
 	CButton	m_CtrlRichTextChk;
 	CEdit	m_CtrlDetail0;
 	CEdit	m_CtrlDesp;
+	CEdit   m_Ctrl_Tag;
 	CRichText m_CtrlDetail;
 	CEdit	m_CtrlName;//
 	CButton	m_bnOK;
 	CButton	m_bnCancel;
 	CString	m_Description;
+	CString	m_Descrip_tag;
 	CString	m_Name;
 	CString	m_Detail;
 	CString	m_Detail0;

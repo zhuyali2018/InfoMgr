@@ -15,6 +15,8 @@
 #define IDB_FOLDERS                     139
 #define IDC_EDIT_NAME                   1000
 #define IDC_EDIT_DESP                   1002
+#define IDC_EDIT_DESP2                  1003
+#define IDC_EDIT_TAGS                   1003
 #define IDC_EDIT_DETAIL                 1004
 #define IDC_EDIT_SEARCHSTR              1005
 #define IDC_CHK_NAME                    1006
@@ -31,6 +33,7 @@
 #define IDC_EDITNAME                    1018
 #define IDC_EDITDESCRIPTION             1019
 #define IDC_EDITDTAILS0                 1020
+#define IDC_EDITDESCRIP_TAG             1020
 #define IDC_EXPLORER1                   1021
 #define IDC_EDIT_DETAIL0                1027
 #define IDC_CHECKRichTextt              1029
@@ -60,7 +63,7 @@
 #ifdef APSTUDIO_INVOKED
 #ifndef APSTUDIO_READONLY_SYMBOLS
 #define _APS_3D_CONTROLS                     1
-#define _APS_NEXT_RESOURCE_VALUE        147
+#define _APS_NEXT_RESOURCE_VALUE        148
 #define _APS_NEXT_COMMAND_VALUE         32803
 #define _APS_NEXT_CONTROL_VALUE         1033
 #define _APS_NEXT_SYMED_VALUE           101

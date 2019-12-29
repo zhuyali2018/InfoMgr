@@ -35,6 +35,7 @@ CDetailFile::CDetailFile(CString filename,UINT fmode)
 
 CDetailFile::~CDetailFile()
 {
+	if (!f.m_pStream)return;  //if never opened, do not close
 		f.Close();
 }
 
@@ -121,6 +122,7 @@ CString CDetailFile::getDetail(int ID)
 
 BOOL CDetailFile::ReadString(CString& line)
 {
+	if (!f.m_pStream) return FALSE;  //if file not open successfully, return
 	linecounter++;
 	line="";
 	if(((p-pbuf)>=100)||(linecounter==1)){

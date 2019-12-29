@@ -274,6 +274,14 @@ BOOL CInfoMgrApp::OnIdle(LONG lCount)
 CDocument* CInfoMgrApp::OpenDocumentFile(LPCTSTR lpszFileName) 
 {
 	// TODO: Add your specialized code here and/or call the base class
+
+	CString fname = lpszFileName;
+	int len = fname.GetLength();
+	int pos = fname.ReverseFind(_T('\\'));
+	if(pos > -1 ){
+	    CString mname = fname.Mid(pos + 1, len - pos - 5);
+	    exepath = fname.Mid(0, pos + 1);		
+	}
 	bTitleUpdated=FALSE;
 	return CWinApp::OpenDocumentFile(lpszFileName);
 }

@@ -18,6 +18,7 @@ IMPLEMENT_DYNCREATE(CContentView, CFormView)
 
 CContentView::CContentView()
 	: CFormView(CContentView::IDD)
+	, m_Descrip_tag(_T(""))
 {
 	//{{AFX_DATA_INIT(CContentView)
 	m_Name = _T("");
@@ -39,11 +40,14 @@ void CContentView::DoDataExchange(CDataExchange* pDX)
 	DDX_Control(pDX, IDC_EDITNAME, m_CtrlName);
 	DDX_Control(pDX, IDC_EDITDTAILS, m_CtrlDetail);
 	DDX_Control(pDX, IDC_EDITDESCRIPTION, m_CtrlDesp);
+	DDX_Control(pDX, IDC_EDITDESCRIP_TAG, m_Ctrl_Tag);
 	DDX_Text(pDX, IDC_EDITNAME, m_Name);
 	DDX_Text(pDX, IDC_EDITDTAILS, m_Details);
 	DDX_Text(pDX, IDC_EDITDESCRIPTION, m_Description);
+	DDX_Text(pDX, IDC_EDITDESCRIP_TAG, m_Descrip_tag);
 	DDX_Control(pDX, IDC_EXPLORER1, m_browser);
 	//}}AFX_DATA_MAP
+	
 }
 
 
@@ -92,7 +96,8 @@ void CContentView::OnUpdate(CView* pSender, LPARAM lHint, CObject* pHint)
 	int ID=pR->ID;
 	m_Name=pR->Name;
 	m_Details=pR->Detail;
-	m_Description=pR->Description;
+	m_Description = pR->Description;
+	m_Descrip_tag = pR->Descrip_tag;
 	if(m_Description.GetLength()>1){
 		if((m_Description.Left(7).CompareNoCase(_T("http://"))==0)||    // if a web url
 			(m_Description.Left(2)==_T("\\\\"))||						// if a network url
@@ -122,22 +127,18 @@ void CContentView::OnSize(UINT nType, int cx, int cy)
 	
 	// TODO: Add your message handler code here
 
-	int x=60;
+	int x=100;
 	int y=5;
 	
 	int h=22;
 	int w=cx-100;
-	
-	int bottom=20;
-	int right=21;
-	int bnwidth=72;
-	int bnheight=22;
 
 	if(m_CtrlName.m_hWnd==NULL) return;
-	m_CtrlName.MoveWindow(x,y,w+40,h);
-	m_CtrlDesp.MoveWindow(x,y+24,w+40,h);
-	m_CtrlDetail.MoveWindow(x-60,y+24+24,w+100,cy-50);
-	m_browser.MoveWindow (x-60,y+24+24,w+100,cy-50);
+	m_CtrlName.MoveWindow(x, y, w + 40, h);
+	m_CtrlDesp.MoveWindow(x, y + 24, w + 40, h);
+	m_Ctrl_Tag.MoveWindow(x, y + 48, w + 40, h);
+	m_CtrlDetail.MoveWindow(x-60,y+24*3,w+100,cy-50);
+	   m_browser.MoveWindow(x-60,y+24*3,w+100,cy-50);
 	m_Resizing=TRUE;
 	DisplayImage(m_Description);
 }
@@ -164,6 +165,8 @@ CString CContentView::getCurrentPath(){
 extern CString exepath;
 void CContentView::DisplayImage(CString m_Description)
 {
+	if (m_Description == "")
+		return;
 	m_DoNotDisplayBrowser=FALSE;
 	// inserting for relative path-----
 	CString prePath=_T("");
