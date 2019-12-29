@@ -73,7 +73,7 @@ void CInfoMgrDoc::Serialize(CArchive& ar)
 		int IDCounter=0;
 		if(ar.ReadString(line)){
 			IDCounter=ParseForIDCounter(line);
-			if(IDCounter<=0){				
+			if(IDCounter<0){				
 				return;
 			}
 		}else
