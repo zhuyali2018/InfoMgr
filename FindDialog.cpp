@@ -20,6 +20,7 @@ CFindDialog::CFindDialog(CLeftView * pV,CInfoMgrDoc * pDoc)
 	//{{AFX_DATA_INIT(CFindDialog)
 	m_CaseSensitive = FALSE;
 	m_SearchDescription = FALSE;
+	m_SearchDescrip_tag = FALSE;
 	m_SearchDetail = FALSE;
 	m_SearchName = TRUE;
 	m_SearchString = _T("");
@@ -39,6 +40,7 @@ void CFindDialog::DoDataExchange(CDataExchange* pDX)
 	//{{AFX_DATA_MAP(CFindDialog)
 	DDX_Check(pDX, IDC_CHK_CASE, m_CaseSensitive);
 	DDX_Check(pDX, IDC_CHK_DESC, m_SearchDescription);
+	DDX_Check(pDX, IDC_CHK_DTAG, m_SearchDescrip_tag);
 	DDX_Check(pDX, IDC_CHK_DETAIL, m_SearchDetail);
 	DDX_Check(pDX, IDC_CHK_NAME, m_SearchName);
 	DDX_Text(pDX, IDC_EDIT_SEARCHSTR, m_SearchString);
@@ -52,6 +54,7 @@ BEGIN_MESSAGE_MAP(CFindDialog, CDialog)
 	//{{AFX_MSG_MAP(CFindDialog)
 	ON_BN_CLICKED(IDOK, OnOKsearch)
 	//}}AFX_MSG_MAP
+	ON_BN_CLICKED(IDC_CHK_DESC, &CFindDialog::OnBnClickedChkDesc)
 END_MESSAGE_MAP()
 
 /////////////////////////////////////////////////////////////////////////////
@@ -109,18 +112,21 @@ BOOL CFindDialog::IsTheRecord(CRecord *p)
 {
 	CString Name=p->Name;	
 	CString Description=p->Description; 
+	CString Descrip_tag = p->Descrip_tag;
 	CString Detail=p->Detail; 
 	
 	if(!m_CaseSensitive){
 		Name.MakeLower();
 		Description.MakeLower();
+		Descrip_tag.MakeLower();
 		Detail.MakeLower();
 		m_SearchString.MakeLower();
 	}
 
 	BOOL Found=FALSE;
 	if(m_SearchName)		if(Name.Find(m_SearchString)>=0)	   {Found=TRUE; goto exit; }		
-	if(m_SearchDescription)	if(Description.Find(m_SearchString)>=0){Found=TRUE; goto exit; }				
+	if(m_SearchDescription)	if(Description.Find(m_SearchString)>=0){Found=TRUE; goto exit; }
+	if(m_SearchDescrip_tag)	if(Descrip_tag.Find(m_SearchString)>=0){Found=TRUE; goto exit; }
 	if(m_SearchDetail)		if(Detail.Find(m_SearchString)>=0)	   Found=TRUE;
 exit:	
 	return Found;
@@ -147,4 +153,10 @@ void CFindDialog::MarkTheItem(HTREEITEM hItem)
 	treeCtrl->EnsureVisible(hItem);
 	treeCtrl->SetItemImage(hItem,1,2);
 	pLeftView->IconSetList.AddTail(hItem);	
+}
+
+
+void CFindDialog::OnBnClickedChkDesc()
+{
+	// TODO: Add your control notification handler code here
 }

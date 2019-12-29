@@ -15,13 +15,14 @@
 #define IDB_FOLDERS                     139
 #define IDC_EDIT_NAME                   1000
 #define IDC_EDIT_DESP                   1002
-#define IDC_EDIT_DESP2                  1003
 #define IDC_EDIT_TAGS                   1003
 #define IDC_EDIT_DETAIL                 1004
 #define IDC_EDIT_SEARCHSTR              1005
 #define IDC_CHK_NAME                    1006
 #define IDC_CHK_DESC                    1007
 #define IDC_CHK_DETAIL                  1008
+#define IDC_CHK_DESC2                   1009
+#define IDC_CHK_DTAG                    1009
 #define IDC_CHK_CASE                    1010
 #define IDC_RADIO_SEARCHALL             1011
 #define IDC_RADIO_SEARCHOFFSPRINGS      1012
@@ -63,7 +64,7 @@
 #ifdef APSTUDIO_INVOKED
 #ifndef APSTUDIO_READONLY_SYMBOLS
 #define _APS_3D_CONTROLS                     1
-#define _APS_NEXT_RESOURCE_VALUE        148
+#define _APS_NEXT_RESOURCE_VALUE        149
 #define _APS_NEXT_COMMAND_VALUE         32803
 #define _APS_NEXT_CONTROL_VALUE         1033
 #define _APS_NEXT_SYMED_VALUE           101

@@ -83,7 +83,9 @@ CRecord::CRecord(CString line)
 				Name=substring;
 			}else if(count==4) {
 				Description=substring;
-			}else if(count==5) {
+			}else if(count == 5) {
+				Descrip_tag = substring;
+			}else if(count==6) {
 				if(substring=="hasdetail")
 					hasDetail=true;
 				else

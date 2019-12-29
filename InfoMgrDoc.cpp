@@ -350,7 +350,6 @@ void CInfoMgrDoc::SaveTheRecord(CRecord *ptr)
 	//ID
 	line=itoa(ptr->ID,buf,10)+(CString)"^";	
 	//ParentID	
-	//line += "<ParentID>";
 	POSITION pos = ptr->parentIDlist.GetHeadPosition();
 	for (int i=0;i < ptr->parentIDlist.GetCount();i++){
 		int parentID=(int) ptr->parentIDlist.GetNext(pos);
@@ -359,13 +358,15 @@ void CInfoMgrDoc::SaveTheRecord(CRecord *ptr)
 		else
 			line += (CString)"-"+itoa(parentID,buf,10);
 	}
-	//line += "</ParentID>";
+
 	line +="^";
 	// Name
 	line +=ptr->Name;
 	line +="^";
 	// description
 	line +=ptr->Description;
+	line += "^";
+	line += ptr->Descrip_tag;
 	line +="^";
 	// detail
 	if(ptr->hasDetail){

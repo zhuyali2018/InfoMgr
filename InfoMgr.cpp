@@ -171,7 +171,7 @@ public:
 CAboutDlg::CAboutDlg() : CDialog(CAboutDlg::IDD)
 {
 	//{{AFX_DATA_INIT(CAboutDlg)
-	m_Version = (CString)"InfoMgr "+VERSIONNAME+(CString)" Version 5.00";
+	m_Version = (CString)"InfoMgr "+VERSIONNAME+(CString)" Version 5.10";
 	//}}AFX_DATA_INIT
 }
 
@@ -201,6 +201,7 @@ BOOL CAboutDlg::OnInitDialog()
 		_T("Version 4.09: Modified to create temp file in current dir so that no admin right required\r\n")
 		_T("Version 4.10: Modified to fix the ::FOLDER path for images\r\n")
 		_T("Version 4.11: AutoPopulate ::\\images2016\\ \r\n")
+		_T("Version 5.10: Added Descrip_tag field\r\n")
 			;
 	m_ctrlHelpWindow.SetWindowText(m_strHelpMessage);
 	return TRUE;
@@ -264,7 +265,7 @@ BOOL CInfoMgrApp::OnIdle(LONG lCount)
 	int pos=maintitle.Find(_T("-"));
 	if(pos>0){		
 		CString filename=maintitle.Mid(0,pos);
-		CString title=filename+"- "+"Information Manager "+VERSIONNAME+" version 5.00";
+		CString title=filename+"- "+"Information Manager "+VERSIONNAME+" version 5.10";
 		m_pMainWnd-> SetWindowText(title);
 		bTitleUpdated=TRUE;
 	}

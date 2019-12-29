@@ -37,7 +37,8 @@
 //#define VERSION "4.09"      //Temp file webpage.htm will be created in current folder instead of c:\ so that it does not have to be launched as administrator
 //#define VERSION "4.10"      //image accessing not working for ::FOLDER fixed, now work for both ::FOLDER and ::\FOLDER
 //#define VERSION "4.11"      //AutoPopulate ::\\images2016\\
-#define VERSION "5.00"      //Removed the <ParentID>
+//#define VERSION "5.00"      //Removed the <ParentID>
+#define VERSION "5.10"      //Added field Descrip_tag for searching and describing
 #ifdef UNICODE
 #define VERSIONNAME "Unicode"
 #else

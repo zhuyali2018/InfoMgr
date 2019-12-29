@@ -31,6 +31,7 @@ public:
 	enum { IDD = IDD_FIND_DIALOG };
 	BOOL	m_CaseSensitive;
 	BOOL	m_SearchDescription;
+	BOOL	m_SearchDescrip_tag;
 	BOOL	m_SearchDetail;
 	BOOL	m_SearchName;
 	CString	m_SearchString;
@@ -54,6 +55,8 @@ protected:
 	afx_msg void OnOKsearch();
 	//}}AFX_MSG
 	DECLARE_MESSAGE_MAP()
+public:
+	afx_msg void OnBnClickedChkDesc();
 };
 
 //{{AFX_INSERT_LOCATION}}
