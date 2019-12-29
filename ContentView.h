@@ -76,6 +76,10 @@ protected:
 	afx_msg int OnCreate(LPCREATESTRUCT lpCreateStruct);
 	//}}AFX_MSG
 	DECLARE_MESSAGE_MAP()
+public:
+	CStatic m_lb_Name;
+	CStatic m_lb_Desp;
+	CStatic m_lb_Tags;
 };
 
 /////////////////////////////////////////////////////////////////////////////

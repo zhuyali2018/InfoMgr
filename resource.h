@@ -21,7 +21,6 @@
 #define IDC_CHK_NAME                    1006
 #define IDC_CHK_DESC                    1007
 #define IDC_CHK_DETAIL                  1008
-#define IDC_CHK_DESC2                   1009
 #define IDC_CHK_DTAG                    1009
 #define IDC_CHK_CASE                    1010
 #define IDC_RADIO_SEARCHALL             1011
@@ -40,6 +39,11 @@
 #define IDC_CHECKRichTextt              1029
 #define IDC_EDITDTAILS                  1031
 #define IDC_EDIT1                       1032
+#define IDC_STATIC_NAME                 1033
+#define IDC_STATIC_DESP                 1034
+#define IDC_STATIC_TAG                  1035
+#define IDC_STATIC_DETAIL               1036
+#define IDC_STATIC_TAGS                 1037
 #define ID_FILE_OPENDEF                 32771
 #define ID_POP                          32780
 #define ID_EDIT_ITEM                    32781
@@ -66,7 +70,7 @@
 #define _APS_3D_CONTROLS                     1
 #define _APS_NEXT_RESOURCE_VALUE        149
 #define _APS_NEXT_COMMAND_VALUE         32803
-#define _APS_NEXT_CONTROL_VALUE         1033
+#define _APS_NEXT_CONTROL_VALUE         1038
 #define _APS_NEXT_SYMED_VALUE           101
 #endif
 #endif

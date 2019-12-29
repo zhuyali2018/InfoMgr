@@ -11,6 +11,7 @@
 //
 #include "richtext.h"
 #include "LeftView.h"
+#include "afxwin.h"
 /////////////////////////////////////////////////////////////////////////////
 // CEditDialog dialog
 
@@ -67,6 +68,10 @@ protected:
 	DECLARE_MESSAGE_MAP()
 public:
 	afx_msg void OnBnClickedOk();
+	CStatic m_ctrl_Name;
+	CStatic m_ctrl_Desp;
+	CStatic m_ctrl_Tag;
+	CStatic m_ctrl_Detail;
 };
 
 //{{AFX_INSERT_LOCATION}}

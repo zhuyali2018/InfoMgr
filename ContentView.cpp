@@ -47,7 +47,10 @@ void CContentView::DoDataExchange(CDataExchange* pDX)
 	DDX_Text(pDX, IDC_EDITDESCRIP_TAG, m_Descrip_tag);
 	DDX_Control(pDX, IDC_EXPLORER1, m_browser);
 	//}}AFX_DATA_MAP
-	
+
+	DDX_Control(pDX, IDC_STATIC_NAME, m_lb_Name);
+	DDX_Control(pDX, IDC_STATIC_DESP, m_lb_Desp);
+	DDX_Control(pDX, IDC_STATIC_TAGS, m_lb_Tags);
 }
 
 
@@ -133,12 +136,20 @@ void CContentView::OnSize(UINT nType, int cx, int cy)
 	int h=22;
 	int w=cx-100;
 
+	int x1 = x - 76;   //label position vars
+	int w1 = 74;
+
 	if(m_CtrlName.m_hWnd==NULL) return;
-	m_CtrlName.MoveWindow(x, y, w + 40, h);
-	m_CtrlDesp.MoveWindow(x, y + 24, w + 40, h);
-	m_Ctrl_Tag.MoveWindow(x, y + 48, w + 40, h);
-	m_CtrlDetail.MoveWindow(x-60,y+24*3,w+100,cy-50);
-	   m_browser.MoveWindow(x-60,y+24*3,w+100,cy-50);
+
+	m_lb_Name.MoveWindow(x1, y, w1, h);
+	m_lb_Desp.MoveWindow(x1, y + 24, w1, h);
+	m_lb_Tags.MoveWindow(x1, y + 48, w1, h);
+
+	m_CtrlName.MoveWindow(x, y, w-5, h);
+	m_CtrlDesp.MoveWindow(x, y + 24, w-5, h);
+	m_Ctrl_Tag.MoveWindow(x, y + 48, w - 5, h);
+	m_CtrlDetail.MoveWindow(x-60,y+24*3,w+60,cy-90);
+	   m_browser.MoveWindow(x-60,y+24*3,w+60,cy-90);
 	m_Resizing=TRUE;
 	DisplayImage(m_Description);
 }

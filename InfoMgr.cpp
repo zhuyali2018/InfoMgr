@@ -171,7 +171,7 @@ public:
 CAboutDlg::CAboutDlg() : CDialog(CAboutDlg::IDD)
 {
 	//{{AFX_DATA_INIT(CAboutDlg)
-	m_Version = (CString)"InfoMgr "+VERSIONNAME+(CString)" Version 5.10";
+	m_Version = (CString)"InfoMgr "+VERSIONNAME+(CString)" Version 5.20";
 	//}}AFX_DATA_INIT
 }
 
@@ -193,7 +193,7 @@ BOOL CAboutDlg::OnInitDialog()
 		_T("Version 4.02: Fixed the rich text Retrieving error\r\n")
 		_T("Version 4.03: Relative path for pics dropped on EditDialogBox\r\n")
 		_T("\t and populate a timestamp on empty description field\r\n")
-		_T("Version 4.04: Fixed the detail loading problem and extra CF\CR adding problem\r\n")
+		_T("Version 4.04: Fixed the detail loading problem and extra CFCR adding problem\r\n")
 		_T("Version 4.05: Modified to support .png picture file\r\n")
 		_T("Version 4.06: Modified to support .gif picture file and fixed line wrap problem\r\n")
 		_T("Version 4.07: Modified to support .mp4 and all other files with relative path\r\n")
@@ -202,6 +202,7 @@ BOOL CAboutDlg::OnInitDialog()
 		_T("Version 4.10: Modified to fix the ::FOLDER path for images\r\n")
 		_T("Version 4.11: AutoPopulate ::\\images2016\\ \r\n")
 		_T("Version 5.10: Added Descrip_tag field\r\n")
+		_T("Version 5.20: Added code to OnSize() to postion field label properly\r\n")
 			;
 	m_ctrlHelpWindow.SetWindowText(m_strHelpMessage);
 	return TRUE;
@@ -265,7 +266,7 @@ BOOL CInfoMgrApp::OnIdle(LONG lCount)
 	int pos=maintitle.Find(_T("-"));
 	if(pos>0){		
 		CString filename=maintitle.Mid(0,pos);
-		CString title=filename+"- "+"Information Manager "+VERSIONNAME+" version 5.10";
+		CString title=filename+"- "+"Information Manager "+VERSIONNAME+" version 5.20";
 		m_pMainWnd-> SetWindowText(title);
 		bTitleUpdated=TRUE;
 	}

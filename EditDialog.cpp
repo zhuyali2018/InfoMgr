@@ -73,6 +73,10 @@ void CEditDialog::DoDataExchange(CDataExchange* pDX)
 	DDX_Text(pDX, IDC_EDIT_DETAIL0, m_Detail0);
 	DDX_Check(pDX, IDC_CHECKRichTextt, m_bRichText);
 	//}}AFX_DATA_MAP
+	DDX_Control(pDX, IDC_STATIC_NAME, m_ctrl_Name);
+	DDX_Control(pDX, IDC_STATIC_DESP, m_ctrl_Desp);
+	DDX_Control(pDX, IDC_STATIC_TAG, m_ctrl_Tag);
+	DDX_Control(pDX, IDC_STATIC_DETAIL, m_ctrl_Detail);
 }
 
 
@@ -131,10 +135,18 @@ void CEditDialog::OnSize(UINT nType, int cx, int cy)
 	int h=22;
 	int w=cx-100;
 	
+	int x1 = x - 76;   //label position vars
+	int w1 = 74;
+
 	int bottom=20;
 	int right=21;
 	int bnwidth=72;
 	int bnheight=22;
+
+	m_ctrl_Name.MoveWindow(x1, y, w1, h);    //label position
+	m_ctrl_Desp.MoveWindow(x1, y + 30, w1, h);
+	m_ctrl_Tag.MoveWindow(x1, y + 60, w1, h);
+	m_ctrl_Detail.MoveWindow(x1, y + 90, w1, h);
 
 	m_CtrlName.MoveWindow(x,y,w,h);
 	m_CtrlDesp.MoveWindow(x,y+30,w,h);

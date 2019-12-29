@@ -38,7 +38,9 @@
 //#define VERSION "4.10"      //image accessing not working for ::FOLDER fixed, now work for both ::FOLDER and ::\FOLDER
 //#define VERSION "4.11"      //AutoPopulate ::\\images2016\\
 //#define VERSION "5.00"      //Removed the <ParentID>
-#define VERSION "5.10"      //Added field Descrip_tag for searching and describing
+//#define VERSION "5.10"      //Added field Descrip_tag for searching and describing
+#define VERSION "5.10"      //Added code in OnSize() to postion field lables properly
+
 #ifdef UNICODE
 #define VERSIONNAME "Unicode"
 #else
