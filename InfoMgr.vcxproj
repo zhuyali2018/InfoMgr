@@ -364,6 +364,7 @@
     <Image Include="res\bitmap2.bmp" />
     <Image Include="res\bmp00001.bmp" />
     <Image Include="res\icon1.ico" />
+    <Image Include="res\InfoMgr-UTF8.ico" />
     <Image Include="res\InfoMgr.ico" />
     <Image Include="res\InfoMgrDoc.ico" />
     <Image Include="res\toobar.bmp" />

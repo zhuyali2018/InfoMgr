@@ -13,6 +13,7 @@
 #define IDI_ICONUNICODE                 135
 #define IDD_FIND_DIALOG                 137
 #define IDB_FOLDERS                     139
+#define IDI_ICON1                       149
 #define IDC_EDIT_NAME                   1000
 #define IDC_EDIT_DESP                   1002
 #define IDC_EDIT_TAGS                   1003
@@ -68,7 +69,7 @@
 #ifdef APSTUDIO_INVOKED
 #ifndef APSTUDIO_READONLY_SYMBOLS
 #define _APS_3D_CONTROLS                     1
-#define _APS_NEXT_RESOURCE_VALUE        149
+#define _APS_NEXT_RESOURCE_VALUE        150
 #define _APS_NEXT_COMMAND_VALUE         32803
 #define _APS_NEXT_CONTROL_VALUE         1038
 #define _APS_NEXT_SYMED_VALUE           101
