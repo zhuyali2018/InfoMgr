@@ -171,7 +171,7 @@ public:
 CAboutDlg::CAboutDlg() : CDialog(CAboutDlg::IDD)
 {
 	//{{AFX_DATA_INIT(CAboutDlg)
-	m_Version = (CString)"InfoMgr "+VERSIONNAME+(CString)" Version 5.21";
+	m_Version = (CString)"InfoMgr "+VERSIONNAME+(CString)" Version 5.22";
 	//}}AFX_DATA_INIT
 }
 
@@ -204,6 +204,7 @@ BOOL CAboutDlg::OnInitDialog()
 		_T("Version 5.10: Added Descrip_tag field\r\n")
 		_T("Version 5.20: Added code to OnSize() to postion field label properly\r\n")
 		_T("Version 5.21: Changing starting ID from 1 to 0\r\n")
+		_T("Version 5.22: Change icon\r\n")
 			;
 	m_ctrlHelpWindow.SetWindowText(m_strHelpMessage);
 	return TRUE;
@@ -267,7 +268,7 @@ BOOL CInfoMgrApp::OnIdle(LONG lCount)
 	int pos=maintitle.Find(_T("-"));
 	if(pos>0){		
 		CString filename=maintitle.Mid(0,pos);
-		CString title=filename+"- "+"Information Manager "+VERSIONNAME+" version 5.21";
+		CString title=filename+"- "+"Information Manager "+VERSIONNAME+" version 5.22";
 		m_pMainWnd-> SetWindowText(title);
 		bTitleUpdated=TRUE;
 	}
