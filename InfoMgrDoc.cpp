@@ -162,6 +162,8 @@ int CInfoMgrDoc::ParseForIDCounter(CString line)
 
 void CInfoMgrDoc::LoadRecord(CString line,CDetailFile * details)
 {
+	if (line == "")
+		return;
 	CRecord * recordObj=new CRecord(line);	
 	recordObj->treeCtrl=treeCtrl;
 	if(recordObj->hasDetail){

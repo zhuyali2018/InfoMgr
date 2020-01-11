@@ -47,7 +47,7 @@ CRecord::CRecord(CString line)
 	Prev=NULL;
 	hasDetail=false;
 	if(line==""){
-		MessageBox(NULL,_T("Bad Record"),_T("Loading"),MB_OK);
+		MessageBox(NULL,_T("Bad Record:empty line"),_T("Loading"),MB_OK);
 		return;
 	}
 	CString tline=line;
