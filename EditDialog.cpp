@@ -269,8 +269,8 @@ BOOL CEditDialog::OnInitDialog()
 	if((m_Description.GetLength()==0)&&(!m_bReadOnly)){
 		/*CTime now=CTime::GetCurrentTime();
 		CString strNow=now.Format(_T("%m/%d/%Y %H:%M:%S"));
-		m_Description=_T("(")+strNow+_T(")");*/
-		m_Description = _T("::\\images\\");
+		m_Description=_T("(")+strNow+_T(")");
+		m_Description = _T("::\\images\\");*/
 		UpdateData(FALSE);
 	}
 	
